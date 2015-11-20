@@ -12,7 +12,7 @@
     </center></body>
 </html>
 
-<!DOCTYPE html>
+
 <html>
     <head>
         <title></title>
@@ -32,7 +32,7 @@
 </html>
 
 
-<!DOCTYPE html>
+
 <html>
     <head>
         <title></title>
