@@ -6,7 +6,7 @@
     </head>
     <body bgcolor="pink">
     <center>  <h1>Welcome to Railway Enquiry System</h1>
-        <font size="5">  <a href="searchbytrain.html">Search By Train no</a><br>
+        <font size="5">  <a href="searchbytrain.html">Search By Trainno</a><br>
         <a href="searchbystation.html">Search By Station</a></font>
     </center></body>
 </html>
@@ -30,6 +30,7 @@
 </body>
 </html>
 
+
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -37,7 +38,7 @@
     </head>
     <body>
         <center>
-        <h1>Welcome to Graphics Era Train Enquiry System</h1>
+        <h1>Welcome to Railway Enquiry System</h1>
         <%
         String sstn=request.getParameter("sstn");
         String sdtn=request.getParameter("sdtn");
@@ -86,4 +87,41 @@
         </table>
         </center>
     </body>
+</html>
+
+
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+    </head>
+    <body><center>
+        <h1>Welcome to Railway Enquiry System</h1>
+        <%
+        String train=request.getParameter("strain");
+            try{
+        String sql="";
+        int i=1;
+        Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
+        sql="select * from train_tran where trainno="+Integer.parseInt(train);
+        Connection con=DriverManager.getConnection("jdbc:odbc:geit1");
+        Statement stmt=con.createStatement();
+        ResultSet rs=stmt.executeQuery(sql);
+        out.println("<table border=1"+" width='50%'>");
+        out.print("<tr><th>Train No</td><th>Station</th><th>Arrtime</th><th>Deptime</th></tr>");
+        int flag=0;
+        while(rs.next())
+                       {
+            flag=1;
+            out.println("<tr><td>"+rs.getInt(1)+"</td><td>"+rs.getString(2)+"</td><td>"+rs.getString(3)+"</td><td>"+rs.getString(4)+"</td></tr>");
+                       }
+        out.println("</table>");
+        if (flag==0)
+            out.println("no record available");
+        out.println("<a href=index.jsp>Back</a>");
+    }catch(Exception e){
+    out.println(e);
+    }
+            %>
+    </center></body>
 </html>
