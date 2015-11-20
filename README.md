@@ -39,13 +39,13 @@
     </head>
     <body>
     <center><h1>Welcome to Graphics Era Train Enquiry System</h1>
-        <form method="post" action="searchbytrain.jsp">
-            
-            <table border="0" width="40%">
-                <tr>  <td>Train Number</td><td><input type="text" name="strain"></td></tr>
+        <table border="0" width="40%">
+            <form method="post" action="searchbytrain.jsp">
+                <tr><td>Train Number</td><td><input type="text" name="strain"></input></td></tr>
                 <tr align="center"><td colspan="2"><input type="submit" value="search"></td>
                     </tr></table>
-        </form></center>
+        </form>
+        </table>
+        </center>
     </body>
 </html>
-td
