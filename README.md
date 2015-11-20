@@ -4,7 +4,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Railway Enquiry System</title>
     </head>
-    <body bgcolor="ivory">
+    <body bgcolor="pink">
     <center>  <h1>Welcome to Railway Enquiry System</h1>
         <font size="5">  <a href="searchbytrain.html">Search By Train no</a><br>
         <a href="searchbystation.html">Search By Station</a></font>
@@ -18,7 +18,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     </head>
     <body>
-    <center><h1>Welcome to Graphics Era Train Enquiry System</h1> 
+    <center><h1>Welcome to Railway Enquiry System</h1> 
         <table border="0" width="50%">
             <form method="post" action="searchbystation.jsp">
                 <tr><td>Enter Source Station</td><td> <input type="text" name="sstn"></input></td></tr>
@@ -38,7 +38,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     </head>
     <body>
-    <center><h1>Welcome to Graphics Era Train Enquiry System</h1>
+    <center><h1>Welcome to Railway Enquiry System</h1>
         <table border="0" width="40%">
             <form method="post" action="searchbytrain.jsp">
                 <tr><td>Train Number</td><td><input type="text" name="strain"></input></td></tr>
