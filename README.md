@@ -31,44 +31,6 @@
 </html>
 
 
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        
-    </head>
-    <body>
-        <center>
-        <h1>Welcome to Railway Enquiry System</h1>
-        <%
-        String sstn=request.getParameter("sstn");
-        String sdtn=request.getParameter("sdtn");
-            try{
-        String sql="";
-        int i=1;
-        Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
-       sql="SELECT m.trainno,source,destination FROM train_tran t,train_mst m where station like '"+sstn+"' or station like '"+sdtn+"'  and (t.trainno=m.trainno)";
-        Connection con=DriverManager.getConnection("jdbc:odbc:geit1");
-        Statement stmt=con.createStatement();
-        ResultSet rs=stmt.executeQuery(sql);
-        out.println("<table border=1"+" width='50%'>");
-        out.print("<tr><th>Train No</td><th>Source Station</th><th>Destination Station</th></tr>");
-        int flag=0;
-        while(rs.next())
-                       {
-            int x=rs.getInt(1);
-            flag=1;
-            out.println("<tr><td><a href=searchbytrain.jsp?strain="+x+">"+x+"</a></td><td>"+rs.getString(2)+"</td><td>"+rs.getString(3)+"</td></tr>");
-                       }
-        out.println("</table>");
-        if (flag==0)
-            out.println("no record available");
-        out.println("<a href=index.jsp>Back</a>");
-    }catch(Exception e){
-    out.println(e);
-    }
-            %>
-    </center></body>
-</html>
 
 
 <html>
@@ -90,38 +52,3 @@
 </html>
 
 
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        
-    </head>
-    <body><center>
-        <h1>Welcome to Railway Enquiry System</h1>
-        <%
-        String train=request.getParameter("strain");
-            try{
-        String sql="";
-        int i=1;
-        Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
-        sql="select * from train_tran where trainno="+Integer.parseInt(train);
-        Connection con=DriverManager.getConnection("jdbc:odbc:geit1");
-        Statement stmt=con.createStatement();
-        ResultSet rs=stmt.executeQuery(sql);
-        out.println("<table border=1"+" width='50%'>");
-        out.print("<tr><th>Train No</td><th>Station</th><th>Arrtime</th><th>Deptime</th></tr>");
-        int flag=0;
-        while(rs.next())
-                       {
-            flag=1;
-            out.println("<tr><td>"+rs.getInt(1)+"</td><td>"+rs.getString(2)+"</td><td>"+rs.getString(3)+"</td><td>"+rs.getString(4)+"</td></tr>");
-                       }
-        out.println("</table>");
-        if (flag==0)
-            out.println("no record available");
-        out.println("<a href=index.jsp>Back</a>");
-    }catch(Exception e){
-    out.println(e);
-    }
-            %>
-    </center></body>
-</html>
