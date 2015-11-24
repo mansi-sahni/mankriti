@@ -46,7 +46,6 @@
                 <tr align="center"><td colspan="2"><input type="submit" value="search"></td>
                     </tr></table>
         </form>
-        </table>
         </center>
     </body>
 </html>
@@ -62,10 +61,11 @@
         <form method="post" action="searchbytrainnew.jsp">
             
             <table border="0" width="40%">
-                <tr>  <td>Train Number</td><td><input type="text" name="strain"></td></tr>
+                <tr><td>Train Number</td><td><input type="text" name="strain"></td></tr>
                 <tr align="center"><td colspan="2"><input type="submit" value="search"></td>
                     </tr></table>
-        </form></center>
+        </form>
+        </center>
     </body>
 </html>
 
