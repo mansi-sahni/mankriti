@@ -52,3 +52,21 @@
 </html>
 
 
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+    <center><h1>Welcome to Graphics Era Train Enquiry System</h1>
+        <form method="post" action="searchbytrainnew.jsp">
+            
+            <table border="0" width="40%">
+                <tr>  <td>Train Number</td><td><input type="text" name="strain"></td></tr>
+                <tr align="center"><td colspan="2"><input type="submit" value="search"></td>
+                    </tr></table>
+        </form></center>
+    </body>
+</html>
+
+
