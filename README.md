@@ -58,7 +58,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     </head>
     <body>
-    <center><h1>Welcome to Graphics Era Train Enquiry System</h1>
+    <center><h1>Welcome to Railway Enquiry System</h1>
         <form method="post" action="searchbytrainnew.jsp">
             
             <table border="0" width="40%">
